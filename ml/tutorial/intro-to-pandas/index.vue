@@ -70,9 +70,9 @@ This is a property that returns a tuple describing the number of rows and column
 `.isnull()`
 Because Series and DataFrame are missing data aware as mentioned ealier, these methods are available to select, replace (also known as 'impute'), or remove data based on missing values in any columns.
 
-## Excercises
+## Exercises
 
-Load a data science docker and start Jupyter.
+Load the data science docker and start Jupyter. See [previous lesson for info on setting this up](http://datacentric.blog/ml/tutorial/data-science-intro-and-materials)
 
 1) Create a comma separated value file for members of your family and friend circle with a. their favorite movie and b. favorite food/candy. Decide if you want a header in the file.
 
@@ -95,7 +95,7 @@ The easiest way to get additional tutorials and exercises is to go to [the Kaggl
 With the same Docker, you can work through some of the exercises available [in this github project](https://github.com/treehouse-projects/python-introducing-pandas)
 
 ## Cheatsheets
-[Pandas Cheatsheet](https://www.kaggle.com/grroverpr/pandas-cheatsheet)
+[Pandas Cheatsheet](https://www.kaggle.com/grroverpr/pandas-cheatsheet)<br>
 [Pandas and Dates Cheatsheet](https://www.kaggle.com/raenish/cheatsheet-date-helpers)
 
 </template>
