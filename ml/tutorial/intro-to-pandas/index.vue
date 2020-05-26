@@ -1,14 +1,14 @@
 <template lang="md">
 
-## The work of a data scientist for system operators
+## Using Data Science as a System Operator
 
-Working with data means a lot of time is spent gathering, cleaning, transforming, and analyzing data. In this ML course, we will be using Python to perform this work. The first tool we will become acqainted with is the pandas library. There is so much you can do with this library that it would be exhausting to cover it all. Therefore, the strategy we will use is to give a healthy tour of what you can accomplish and then circle back for more detail in later lessons as needed. This is a common strategy that will be used throughout these lessons in order to balance theory, new ideas, and best practices.
+Gaining new insight from data means lots of time spent gathering, cleaning, transforming, and analyzing large data sets. In this ML course, we will be using Python to perform this work. The first tool we will become acqainted with is the pandas library. There is so much you can do with this library that it would be exhausting to cover it all. Therefore, the strategy we will use is to give a healthy tour of what you can accomplish and then circle back for more detail in later lessons as needed. This is a common strategy that will be used throughout these lessons in order to balance theory, new ideas, and best practices.
 
-For those of you looking for more, A list of links at the end will provide great references, cheatsheets and intermediate exercises to push you at the pace you want to go.
+For those of you seeking maximum proficiency, A list of links at the end will provide great references, cheatsheets and intermediate exercises to push you at the pace you want to go.
 
 ## Basic concepts
 
-There are two fundamental types to pandas with which you will want to become familiar.
+There are two fundamental collection data types in pandas with which you will want to become familiar.
 
 __Series__
 
@@ -28,6 +28,76 @@ This data type is the multi-dimensional companion to Series, and can be thought 
   <div class="unminify">
     <CodeEditor :code="code1a" :options="options"></CodeEditor>
   </div>
+
+## Retrieving Data
+
+Once the data is loaded into one of these collections, you are able to pull it out in one of many ways. In a DataFrame, each column uses the Series data type. When you request the data by column name, this Series is returned.
+
+```{.center}
+# This will return a Series of all departments that can be looked up/indexed by 
+# user name, i.e. 'jdoyle'
+depts = indexed_team_bday_df['department']
+```
+
+These can also be returned by label using the `loc` property.
+
+```{.center}
+# In this case it will return a Series for the row that has the value where the
+# labels are set to the column names for that returned row.
+user_jean = indexed_team_bday_df.loc['jdoyle']
+
+# Both label and column name can be used to get the value for that exact location
+user_jean_birthday = indexed_team_bday_df.loc[jdoyle', 'birthday']
+```
+
+Slicing shows The power of selective data retrieval. By using the python ':' subset operator, we can provide a range of values.
+
+```{.center}
+# This returns all rows and the selected columns as a list
+indexed_team_bday_df.loc[:,['department', 'last_name']]
+```
+
+## Important properties and methods for data science
+
+`.iloc()` and `.loc()`
+Both of these seem to have some overlap in returning rows given an index or range of indices. So why are they named slightly different? This is because `.iloc()` uses the 0-based indexing used by the Python stdlib, while `.loc()` is _inclusive_. For string based ranges, it will usually be easier to use `.loc()`. Integer ranges may be either, but be careful or you will have off-by-one errors!
+
+`.shape`
+This is a property that returns a tuple describing the number of rows and columns for the DataFrame.
+
+`.dropna()`
+`.fillna()`
+`.isnull()`
+Because Series and DataFrame are missing data aware as mentioned ealier, these methods are available to select, replace (also known as 'impute'), or remove data based on missing values in any columns.
+
+## Excercises
+
+Load a data science docker and start Jupyter.
+
+1) Create a comma separated value file for members of your family and friend circle with a. their favorite movie and b. favorite food/candy. Decide if you want a header in the file.
+
+2) Load this file into your docker and start a new notebook.
+
+3) Create a DataFrame from this and either create it with column names, or else it will infer the headers from the first row consumed.
+
+4) Retrieve the list (Series) of favorite candy. These should be labeled by each person's name if you used and index, or incrementing number otherwise.
+
+5) View the shape of the DataFrame. Recall what this means from previous section.
+5a) What would this look like if your DataFrame had _top 5 movies_ and _top 5 candies_ for each person?
+
+6) Slice the DataFrame to return a subset of data based on column value.
+6a) For extra credit, do this based on either two or more columns, or column _and_ index. (Your choice)
+
+## Further excercises
+
+The easiest way to get additional tutorials and exercises is to go to [the Kaggle pandas module](https://www.kaggle.com/learn/pandas), read the tutorials and do the associated exercises. You only need to log in if you want to save work, or if you want to avoid the 5-10 minute idle timeout on workbooks.
+
+With the same Docker, you can work through some of the exercises available [in this github project](https://github.com/treehouse-projects/python-introducing-pandas)
+
+## Cheatsheets
+[Pandas Cheatsheet](https://www.kaggle.com/grroverpr/pandas-cheatsheet)
+[Pandas and Dates Cheatsheet](https://www.kaggle.com/raenish/cheatsheet-date-helpers)
+
 </template>
 
 <script>
@@ -43,22 +113,24 @@ This data type is the multi-dimensional companion to Series, and can be thought 
 import pandas as pd
 
 team_birthdays = [
-  ['Sally', 'Finance', '03/25/1993'],
-  ['Jean', 'Engineer', '12/14/1990']
+  ['Sally', 'Ferguson', 'Finance', '03/25/1993'],
+  ['Jean', 'Doyle', 'Engineer', '12/14/1990'],
+  ['Henry', 'Allison', 'Marketing', '01/16/1988']
 ]
 
-pd.DataFrame(team_birthdays)
+# This creates the columns and rows, but no column names or indices (aka labels)
+team_bday_df = pd.DataFrame(team_birthdays)
 
-# with index and column information
-pd.DataFrame(team_birthdays, index=['sally', 'jean'], columns=['first_name', 'department', 'birthdate'])
+# Now try again with index and column information
+indexed_team_bday_df = pd.DataFrame(team_birthdays, index=['sferguson', 'jdoyle', 'hallison'], columns=['first_name', 'last_name', 'department', 'birthdate'])
 `)
   export default {
     layout: 'training',
     title: 'Intro to Pandas',
     tags: null,
     tldr: [
-      'The use of Series and DataFrame for data science',
-      'Making use of different operations on DataFrame type'
+      'Understanding of Series and DataFrame collection types for data science work',
+      'Practice with pandas data types (especially DataFrame!) which is widely used in ML'
     ],
     components: {
       CodeEditor 
