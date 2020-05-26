@@ -6,14 +6,14 @@
       category="Week 1-a"
       image="ml/imgs/frog-flower.jpg"
       author="Added on May 23"
-      desc="In order to better work in data science, follow this training to become more familiar with how Pandas is used to work with Series and DataFrames"
+      desc="Pandas is a popular library for data science work that provides a foundation through its data types, which you will learn about in this lesson."
     ></blog-card>
     <blog-card
       linkpage="ml/tutorial/creating-a-model"
       name="Working with models"
-      category="Week 1-b"
+      category="Week 1-b (COMING SOON)"
       image="ml/imgs/peeking-fawn.jpg"
-      author="Added on May 26"
+      author="Adding on May 27"
       desc="In order to better work in data science, follow this training to become more familiar with how Pandas is used to work with Series and DataFrames"
     ></blog-card>
     <!--<CodeEditor :code="code" :options="options" @input="setCode" @focus="clear"></CodeEditor>-->
@@ -35,7 +35,7 @@
   //let exampleCode = "var Exported=(function c(w){var a='name';return w.component(a);})(Vue)";
 
   export default {
-    title: 'ML Training',
+    title: 'ML Training for Operators',
     layout: 'training',
     components: {
         BlogCard //, CodeEditor
