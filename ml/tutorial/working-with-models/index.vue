@@ -11,11 +11,9 @@
 
 <template lang="md">
 
-  ## Preface
+  ## (In progress - check back Wed, May 27)
 
-  This is a test post
-
-  Just some test text that will be enhanced later
+  This tutorial will cover how ML models work, and how to derive them from data
 </template>
 
 <style lang="less" scoped>

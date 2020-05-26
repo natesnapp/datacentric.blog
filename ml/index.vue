@@ -1,6 +1,14 @@
 <template>
   <div>
     <blog-card
+      linkpage="ml/tutorial/data-science-intro-and-materials"
+      name="Data Science introduction and materials"
+      category="Getting started"
+      image="ml/imgs/baby-bears.jpg"
+      author=""
+      desc="See the goals for this course and get a one-stop docker image to complete setup (hint: it's easy!)"
+    ></blog-card>
+    <blog-card
       linkpage="ml/tutorial/intro-to-pandas"
       name="Introduction to Pandas"
       category="Week 1-a"
@@ -9,7 +17,7 @@
       desc="Pandas is a popular library for data science work that provides a foundation through its data types, which you will learn about in this lesson."
     ></blog-card>
     <blog-card
-      linkpage="ml/tutorial/creating-a-model"
+      linkpage="ml/tutorial/working-with-models"
       name="Working with models"
       category="Week 1-b (COMING SOON)"
       image="ml/imgs/peeking-fawn.jpg"
