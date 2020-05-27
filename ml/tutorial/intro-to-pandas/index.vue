@@ -72,27 +72,31 @@ Because Series and DataFrame are missing data aware as mentioned ealier, these m
 
 ## Exercises
 
-Load the data science docker and start Jupyter. See [previous lesson for info on setting this up](http://datacentric.blog/ml/tutorial/data-science-intro-and-materials)
+Load the data science docker and start Jupyter. See [previous lesson for info on setting this up](http://datacentric.blog/ml/tutorial/data-science-intro-and-materials).
 
-1) Create a comma separated value file for members of your family and friend circle with a. their favorite movie and b. favorite food/candy. Decide if you want a header in the file.
+1) Create a comma separated value file for members of your family and friend circle with _(a)_ their favorite movie and _(b)_ favorite food/candy. Decide if you want a header in the file.
 
-2) Load this file into your docker and start a new notebook.
+2) Load this file into your docker and start a new notebook. The instructions to start docker have you map the local directory to _/srv/_ which you can use to bring files into docker.
 
 3) Create a DataFrame from this and either create it with column names, or else it will infer the headers from the first row consumed.
 
-4) Retrieve the list (Series) of favorite candy. These should be labeled by each person's name if you used and index, or incrementing number otherwise.
+4) Retrieve the list (Series) of favorite candy. These will be labeled by each person's name if you used an index, or incrementing number otherwise.
 
-5) View the shape of the DataFrame. Recall what this means from previous section.
-5a) What would this look like if your DataFrame had _top 5 movies_ and _top 5 candies_ for each person?
+5) What is the shape of your DataFrame? Recall what this means from previous section. It will be (_no. of rows_, _no. of columns_) which is known as a 2-tuple.<br>
+5a. How would the shape change if you decide to also track another dimension in your DataFrame, such as 'hometown'?<br>
+5b. _**Optional** This will help you understand tensors later on, but for now is theoretical._<br>
+Is it possible to have a shape described by a 3-tuple? What would this require in how your DataFrame is structured.<br>
+_**Hint:**_ Recall that by using index, you have a lookup into a row. A second lookup by dimension name lets you also get the specific column. Would just adding a dimension give you shape described by a 3-tuple?<br>
+_**Second hint:**_ An example is helpful.. think of how a Photoshopped image of a lawn can selectively apply a green mask to make the grass look more vivid. It will look at pixel intensity for each coordinate and additionally by Green intensity. 'Color' is another level of indexing into the collection of pixels.
 
-6) Slice the DataFrame to return a subset of data based on column value.
-6a) For extra credit, do this based on either two or more columns, or column _and_ index. (Your choice)
+6) Slice the DataFrame to return a subset of data based on column value.<br>
+6a. For extra style points, do this based on either two or more columns, or column _and_ index. (Your choice)
 
-## Further excercises
+## Further exercises
 
 The easiest way to get additional tutorials and exercises is to go to [the Kaggle pandas module](https://www.kaggle.com/learn/pandas), read the tutorials and do the associated exercises. You only need to log in if you want to save work, or if you want to avoid the 5-10 minute idle timeout on workbooks.
 
-With the same Docker, you can work through some of the exercises available [in this github project](https://github.com/treehouse-projects/python-introducing-pandas)
+With the same Docker, you can work through some of the exercises available [in this github project](https://github.com/treehouse-projects/python-introducing-pandas).
 
 ## Cheatsheets
 [Pandas Cheatsheet](https://www.kaggle.com/grroverpr/pandas-cheatsheet)<br>
