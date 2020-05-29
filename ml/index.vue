@@ -19,10 +19,10 @@
     <blog-card
       linkpage="ml/tutorial/working-with-models"
       name="Working with models"
-      category="Week 1-b (COMING SOON)"
+      category="Week 1-b"
       image="ml/imgs/peeking-fawn.jpg"
-      author="Adding on May 27"
-      desc="In order to better work in data science, follow this training to become more familiar with how Pandas is used to work with Series and DataFrames"
+      author="Added on May 28"
+      desc="This lesson introduces the fundamental components of machine learning and how to describe its model - the algorithm for classification and prediction"
     ></blog-card>
     <!--<CodeEditor :code="code" :options="options" @input="setCode" @focus="clear"></CodeEditor>-->
   </div>
