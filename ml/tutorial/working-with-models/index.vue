@@ -72,7 +72,7 @@
 
   Where does deep learning fit into this? Is it supervised, unsupervised, or something else altogether? Give that some thought.
 
-  Deep Learning has classifiers and techniques that be used as _supervised_ Deep Learning and _unsupervised_ Deep Learning. There are even _semi-supervised_ learning strategies. We will get into deep learning in the following lesson. For now, it is enough to know that certain methods such as Convolutional Neural Networks (CNNs) are supervised, while others such as Auto-encoders are unsupervised..
+  Deep Learning has classifiers and techniques that can be used as _supervised_ Deep Learning and _unsupervised_ Deep Learning. There are even _semi-supervised_ learning strategies. We will get into deep learning in the following lesson. For now, it is enough to know that certain methods such as Convolutional Neural Networks (CNNs) are supervised, while others such as Auto-encoders are unsupervised..
 
   ## Selecting and evaluating features
 
