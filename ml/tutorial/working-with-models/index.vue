@@ -90,9 +90,9 @@
 
   Load the data science docker and start Jupyter. Review the instructions to do this, if needed.
 
-  We are going to work with a training dataset for determining malicious websites based on different criteria. <a href="./dataset.zip">Download the dataset</a>, and make it available to load in your docker. Do this by putting it in the directory from where you start the docker instance. This folder loads as the /srv mount path and then you can call `.read_csv('/srv/dataset.csv')`, in your python notebook to load it..
+  We are going to work with a training dataset for determining malicious websites based on different criteria. <a href="https://drive.google.com/open?id=1wVJHxZu3-DZ75kosuLgIacNCNzblgNIS">Download the dataset</a>, and make it available to load in your docker. Do this by putting it in the directory from where you start the docker instance. This folder loads as the /srv mount path and then you can call `.read_csv('/srv/dataset.csv')`, in your python notebook to load it..
 
-  <a href="./supervised-ml-malicious-websites.ipynb">Here is a link</a> to a Jupyter notebook to see various summaries of this data, as well as discovering the _separating hyper plane_ between websites that are malicious, and those that are safe.
+  <a href="https://drive.google.com/open?id=1gQimkKmOArypsEg-koDAIPTbtq3EOlTt">Here is a link</a> to a Jupyter notebook to see various summaries of this data, as well as discovering the _separating hyper plane_ between websites that are malicious, and those that are safe.
 
   This dataset and Jupyter notebook come from the Kaggle website. Read the description for the dataset <a href="https://www.kaggle.com/xwolf12/malicious-and-benign-websites/data#">as mentioned on the Kaggle project page</a>. This will give you a better idea of what the columns mean.
 
