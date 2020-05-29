@@ -11,9 +11,9 @@
 
 <template lang="md">
 
-  20 years ago, it was pretty clear which types of work a computer could do better than a human. Anything involving number crunching with lots of data and quick turn around would be a great task to run on a computer. On the other hand, what if you wanted to save pictures from your island vacation and select the best ones to remember the trip by? You would have gone through hundreds of pictures individually and to pick out the keepers. Smiling family, beautiful scenery, and action would be deteremined while blurry pictures and duplicates would be removed. Surely this would have been too subjective for a computer to weigh in.
+  20 years ago, it was pretty clear which types of work a computer could do better than a human. Anything involving number crunching with lots of data and quick turn around would be a great task to run on a computer. On the other hand, what if you wanted to save pictures from your island vacation and select the best ones to remember the trip by? You would have gone through hundreds of pictures individually to pick out the keepers. Smiling family, beautiful scenery, and action would be considered while blurry pictures and duplicates would be removed. Surely this would have been too subjective for a computer to weigh in.
 
-  Fast forward to today. The good vacation pictures you want to keep probably share _some_ features with the millions of other pictures that are being taken. Why don't we tell a computer what to look for and it can do the work for us?
+  Fast forward to today. The best vacation pictures you want to keep probably share _some_ features with the millions of other pictures that are being taken. Why don't we tell a computer what to look for and it can do the work for us?
 
 <img class="col-md-12" src="./imgs/picture-evaluation-checkmarks.png" /><br>
 
