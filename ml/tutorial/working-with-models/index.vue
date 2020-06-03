@@ -84,15 +84,14 @@
 
   <img class="col-md-8" src="./imgs/shape-color-features.png" /><br clear="all" />
 
-  We can see a much better determination of what feature tells us the type of fruit. The point clouds now lie cleanly on each side of the dividing line. The slope of the line tells us something about shape. It is nearly orthgonal with the axis for _color_, and parallel with _shape_. This tells us that shape is _not_ a good predictor of the type of fruit. Even if we shuffled the points along the _shape_ axis, they would still fall cleanly on the same side of the line.
+  Now that we are using _color_ as a feature, the model is much more useful and determining the label for the type of fruit. The point clouds now lie cleanly on each side of the dividing line. Meanwhile, how about _shape_? The slope of the line tells us something here. It is nearly orthgonal with the axis for _color_, and parallel with _shape_. This tells us that shape is _not_ a good predictor of the type of fruit. Intuitively this makes sense, and using the graph you can prove this to yourself as well. Imagine that we shuffle the points along the _shape_ axis &mdash; they would still fall cleanly on the same side of the line.
 
   ## Exercise
 
   Load the data science docker and start Jupyter. Review the instructions to do this, if needed.
 
-  We are going to work with a training dataset for determining malicious websites based on different criteria. <a href="https://drive.google.com/open?id=1wVJHxZu3-DZ75kosuLgIacNCNzblgNIS">Download the dataset</a>, and make it available to load in your docker. Do this by putting it in the directory from where you start the docker instance. This folder loads as the /srv mount path and then you can call `.read_csv('/srv/dataset.csv')`, in your python notebook to load it..
-
-  <a href="https://drive.google.com/open?id=1gQimkKmOArypsEg-koDAIPTbtq3EOlTt">Here is a link</a> to a Jupyter notebook to see various summaries of this data, as well as discovering the _separating hyper plane_ between websites that are malicious, and those that are safe.
+  We are going to work with a training dataset for determining malicious websites based on different criteria. <a href="https://drive.google.com/file/d/1BBuFMnPl5qYwuZ_RxhwwRtrJHcIsd4MX/view?usp=sharing">Download the dataset</a>, and make it available to load in your docker. Do this by putting it in the directory from where you start the docker instance. This folder loads as the /srv mount path and then you can call `.read_csv('/srv/dataset.csv')`, in your python notebook to load it..
+  <a href="https://drive.google.com/file/d/1xJsZmxumFel1YVbOyCSzelXkjDgfULZI/view?usp=sharing">Here is a link</a> to a Jupyter notebook to see various summaries of this data, as well as discovering the _separating hyper plane_ between websites that are malicious, and those that are safe.
 
   This dataset and Jupyter notebook come from the Kaggle website. Read the description for the dataset <a href="https://www.kaggle.com/xwolf12/malicious-and-benign-websites/data#">as mentioned on the Kaggle project page</a>. This will give you a better idea of what the columns mean.
 
